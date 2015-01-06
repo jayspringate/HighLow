@@ -1,0 +1,22 @@
+<script>
+
+
+var deck = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"];
+
+
+var trueAnswer = deck.indexOf(deck[Math.floor(Math.random() * deck.length)]);
+
+var guessAnswer = deck.indexOf(prompt("pick a card! 2-10 or J,Q,K, or A!"));
+
+while (trueAnswer !== guessAnswer) {
+	if (trueAnswer > guessAnswer) {
+	var guessAnswer = deck.indexOf(prompt("Try again! Guess higher!"));
+} else {
+	var guessAnswer = deck.indexOf(prompt("Try again! Guess lower!"));
+}
+};
+
+alert("Correct! Thanks for playing! Do you know why this took me so long?");
+alert("Because I wrote it after Tyler deleted my entire hard drive!");
+
+</script>
