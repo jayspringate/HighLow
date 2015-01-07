@@ -1,0 +1,22 @@
+<script>
+//Jay wanted to use math.random to pick a random number between 1 and 13. He then created an array of string 1-9 and J,Q,K,A. The random number references an in index in the array. The function compares the random number to the play in the index and if they are the same then it is true. If they are different then the game keeps looping.//
+	var play = function (){
+		var deck = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"];
+		var answer = deck.indexOf(deck[Math.floor(Math.random() * deck.length)]);
+		var guess = deck.indexOf(prompt("pick a card! 2-10 or J,Q,K, or A!"));
+	
+		while (answer !== guess) {
+				if (answer > guess) {
+				var guess = deck.indexOf(prompt("Try again! Guess higher!"));
+				}	else {
+				var guess = deck.indexOf(prompt("Try again! Guess lower!"));
+				}
+		}
+	};
+	// I closed each piece of the function directly below where it started//
+	play();
+
+	alert("Correct! Thanks for playing! Do you know why this took me so long?");
+	alert("Because I wrote it after Tyler deleted my entire hard drive!");
+
+</script>
